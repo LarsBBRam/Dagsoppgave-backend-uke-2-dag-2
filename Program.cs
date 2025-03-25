@@ -40,6 +40,7 @@ class Program
             Console.WriteLine();
             Console.WriteLine("NB: Should you enter anything except 1, 2, 3, or exit, nothing will happen.");
 
+#pragma warning disable CS8602  //The warning here is accounted for and is just annoying.
             mainMenuInput = Console.ReadLine().ToLower().Trim().Replace(" ", "");
 
             if (mainMenuInput != null)
@@ -279,7 +280,7 @@ class Program
                                         foreach (var strings in stringStorage)
                                         {
                                             Console.WriteLine();
-                                            Console.WriteLine(strings);
+                                            Console.WriteLine($"The string {strings}");
                                             Console.WriteLine();
                                         }
                                         Console.WriteLine("--------------------------------------");
@@ -308,7 +309,7 @@ class Program
                                         foreach (var ints in typeTimeInt)
                                         {
                                             Console.WriteLine();
-                                            Console.WriteLine(ints);
+                                            Console.WriteLine($"The integer {ints}");
                                             Console.WriteLine();
                                         }
                                         Console.WriteLine("--------------------------------------");
@@ -335,7 +336,7 @@ class Program
                                         foreach (var doubles in typeTimeDouble)
                                         {
                                             Console.WriteLine();
-                                            Console.WriteLine(doubles);
+                                            Console.WriteLine($"The double {doubles}");
                                             Console.WriteLine();
 
                                         }
